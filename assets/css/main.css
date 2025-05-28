@@ -114,8 +114,29 @@ height: 18px;
  cursor: default;
  transform-origin: calc(100% - 20px) top;
  animation: headernotify-grouth ease-in 0.3s;
+ will-change: opacity ,transform;
  display: none;
 }
+.header_notify::before{
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--whitle-color) transparent;
+    position: absolute;
+    right: 12px;
+    top: -30px;
+}
+.header_notify::after{
+    content: "";
+    height: 20px;
+    width: 90px;
+    border-style: solid;
+    position: absolute;
+    border-color: transparent;
+    right: 0;
+    top: -25px;
+}
+
 @keyframes headernotify-grouth{
     from{
         transform: scale(0);
